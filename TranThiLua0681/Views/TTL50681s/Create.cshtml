@@ -1,0 +1,38 @@
+@model TranThiLua0681.Models.TTL50681
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>TTL50681</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TTLName" class="control-label"></label>
+                <input asp-for="TTLName" class="form-control" />
+                <span asp-validation-for="TTLName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TTLGender" class="control-label"></label>
+                <input asp-for="TTLGender" class="form-control" />
+                <span asp-validation-for="TTLGender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
